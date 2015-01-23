@@ -4,6 +4,7 @@ function add_file {
   select FILENAME in *;
   do
   git add $REPLY
+  done
   }
 add_file  
 read -p "Please enter your commit message > " msg
