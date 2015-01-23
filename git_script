@@ -6,6 +6,7 @@ function add_file {
   git add $REPLY
   done
   }
+echo -e "Please enter the file you want to push"  
 add_file  
 read -p "Please enter your commit message > " msg
 git commit -m "$msg"
