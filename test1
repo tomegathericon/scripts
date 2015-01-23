@@ -4,8 +4,8 @@ select fname in Web\ Server NFS\ Server ;
 do
 case $REPLY in
     1 ) echo "Hello";break
-    
-    2 ) echo "Hi"; break
+        ;; 
+    2 ) echo "Hi";break
 
     esac
 done
