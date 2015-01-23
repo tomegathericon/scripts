@@ -1,11 +1,22 @@
 
 #!/bin/bash
+#Script is meant to minimize the work for a git user. It presents the user with an option to run basic git commands such as push and pull.
+##Soon to be added : Init & Diff
+
+################################FUNCTION DECLARATION#############################
 function add_file { 
   select FILENAME in *;
   do
   git add $REPLY
   done
   }
+################################FUNCTION DECLARATION#############################
+
+################################VARIABLE DECLARATION#############################
+################################VARIABLE DECLARATION#############################
+read -p "Please enter the path of your Git Master directory > " dir_path
+cd $dir_path
+echo -e "You are currently at $(pwd)"
 echo -e "Please enter the file you want to push"  
 add_file  
 read -p "Please enter your commit message > " msg
