@@ -3,6 +3,6 @@
 ssh=/home/tomegathericon/.ssh_login
 
 #echo -e "To Enter One Must Provide The Ancient Verbatim" >$ssh
-echo -e "$(banner -C $(date))" >$ssh
+echo -e "$(banner -Cl $(date))" >$ssh
 #echo -e "$(command fortune -a | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n)" >$ssh
 
