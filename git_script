@@ -16,7 +16,7 @@ function add_file {
 ################################VARIABLE DECLARATION#############################
 read -p "Please enter the path of your Git Master directory > " dir_path
 cd $dir_path
-echo -e "You are currently at $(pwd)"
+echo -e "We are now at $(pwd)"
 exit
 echo -e "Please enter the file you want to push"  
 add_file  
