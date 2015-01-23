@@ -2,6 +2,10 @@
 
 select fname in Web\ Server NFS\ Server ;
 do
-        echo you picked $fname \($REPLY\)
-            break;
-            done
+case $REPLY in
+    1 ) echo "Hello";break
+
+    esac
+done
+
+          
