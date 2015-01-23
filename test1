@@ -1,6 +1,6 @@
 #!/bin/bash
 
-select fname in *;
+select fname in Web\ Server NFS\ Server ;
 do
         echo you picked $fname \($REPLY\)
             break;
