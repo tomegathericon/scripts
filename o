@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ cp /etc/nagios/cgi.cfg.sample /etc/nagios/cgi.cfg
+  cp /etc/nagios/resource.cfg.sample /etc/nagios/resource.cfg
+   cp /etc/nagios/nagios.cfg.sample /etc/nagios/nagios.cfg
+    cp /etc/nagios/objects/commands.cfg.sample /etc/nagios/objects/commands.cfg
+     cp /etc/nagios/objects/contacts.cfg.sample /etc/nagios/objects/contacts.cfg
+      cp /etc/nagios/objects/localhost.cfg.sample /etc/nagios/objects/localhost.cfg
+       cp /etc/nagios/objects/templates.cfg.sample /etc/nagios/objects/templates.cfg
+        cp /etc/nagios/objects/timeperiods.cfg.sample /etc/nagios/objects/timeperiods.cfg

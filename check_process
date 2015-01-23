@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ps cax | grep xbmc > /dev/null
+if [ $? -ne 0 ]; then
+echo "XBMC is not running" | mail -s "ARCHPAD Process Failure" tomegathericon@kapoorabhishek.asia 
+fi
+
+#ps cax | grep Plex > /dev/null
+#if [ $? -ne 0 ]; then
+#echo "Plex is not running" | mail -s "ARCHPAD Process Failure" tomegathericon@kapoorabhishek.asia 
+#fi

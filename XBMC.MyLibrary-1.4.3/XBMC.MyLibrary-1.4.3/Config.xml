@@ -1,0 +1,156 @@
+<!--
+XBMC.MyLibrary 
+Author: BradVido88, angrycamel	
+	THIS IS BETA SOFTWARE - IF YOU HAVE PROBLEMS, PLEASE POST TO THE SUPPORT THREAD WIHT A LINK TO YOUR LOG
+		Support thread is located here: http://forum.xbmc.org/showthread.php?t=98210
+
+-->
+
+<root>		
+	
+	<!--
+	JSONRPC - JSON-RPC API connectivity is required for this program to work.
+		XBMCWebServer - The URL of XBMC. You can include the username, password and port in the url if needed.
+						The XBMC Webserver must be enabled in XBMC settings.
+						
+		AnnouncementPort - The TCP port that XBMC uses for JSON-RPC announcements. Default is 9090.
+					IMPORTANT: 	This requires going to System, Services, Remote Control and
+								checking "Allow Programs on this/others systems to control XBMC"				 			
+	-->
+	<JSONRPC>
+		<XBMCWebServer>http://username:password@localhost:80</XBMCWebServer><!--Either name or ip, address of XBMC instance that has PlayOn added as a source. Do not include :port here. -->
+						
+		<!-- Default is 9090 -->
+		<AnnouncementPort>9090</AnnouncementPort>		
+	</JSONRPC>
+	
+	
+	<!--
+	Dropbox - This is the folder where all the Video's .strm files will be stored.
+		Inside this folder, subfolders will be created named "TV Shows", "Movies", and "Music Videos"		
+		
+		IMPORTANT: The dropbox must be a new folder used exclusively for this script. 
+				   Do not use an existing video source's folder!
+		IMPORTANT: It is highly recommended to use a smb share as your dropbox!
+		
+		streaming - The "Main" dropbox where videos are put by default
+			On your computer, create a new folder, enter it's location here. 
+			Then create 3 subfolders under it, named "TV Shows", "Movies", and "Music Videos".
+			Go into XBMC and add each of the 3 subfolders under the Videos, Files, Add Source, setting the content for each folder
+			Note: Use the same exact path in XBMC as you have here. Don't use a local path here and a UNC (smb://) path in XBMC.		
+			
+		LinuxSamba - If specified, this will be prepended to the local path you specified in <streaming>. 
+						Useful if you use linux xbmc and your sources are on a smb share. Example: smb://COMPUTER_NAME
+	-->
+	
+	<Dropbox>
+		<streaming>/home/tomegathericon/Videos</streaming>		
+		<LinuxSambaPrefix></LinuxSambaPrefix>
+	</Dropbox>
+			
+	
+	<!--IPChange
+		For example, if you are browsing UPNP sources on the same box they are hosted on, the address
+		may resolve as "127.0.0.1" instead of the LAN IP. If you attempt to the play file on any
+		other computer, it will not work. We can fix this by replacing it with the correct IP.
+	-->	
+	<IPChange enabled="false">
+		<change from="127.0.0.1" to="192.168.1.1" />
+		<change from="localhost" to="192.168.1.1" />
+	</IPChange>	
+		
+	<!--ManualArchiving
+		If enabled, videos that are not successfully added to XBMC's library (after the configured amount of hours, will me manually archived using .nfo files)
+		See here for details on manual archiving in XBMC: http://wiki.xbmc.org/index.php?title=Import_-_Export_Library#Video_nfo_Files -->
+	<ManualArchiving enabled="false">
+		<HoursThreshold>24.0</HoursThreshold><!--The video must have been archived at least this many hours ago before it will be manually archived -->		
+	</ManualArchiving>
+	
+	<!--When videos that were previously found are no longer found, they will be deleted from the dropbox as configured by these parameters -->
+	<VideoCleanUp>
+		<HoursThreshold>8.0</HoursThreshold><!--The video must be missing for at least this many hours before it's deleted. -->
+		<ConsecutiveThreshold>3</ConsecutiveThreshold><!--The video must be missing for this many consecutive times before it's deleted (each time this program runs is consider 1 time). -->
+	</VideoCleanUp>
+	
+	<!-- Pre-Scrape Music Videos
+		If enabled, music vidoes will be scraped using the Yahoo Music API and a .nfo will be created for the video. Thumbs will also be scraped.
+		If pre-scrape is enabled, it is recommened to use the MTV Music Video scraper in XBMC, 
+		this allows for fall-back to that scraper if the Yahoo scraped can't find the music video. -->	
+	<PreScrapeMusicVids enabled="false" />
+	
+	<!-- XBMC Restart before scan.
+	If enabled is true, XBMC will be restarted before this program scans for content. This fixes caching issues XBMC can have, expecially with UPNP sources like PlayOn.
+		If you set this to true, you should modify the res/XBMCRestart.cmd file in this program's directory to fit your needs. -->
+	<XBMCRestart enabled="false" />
+	
+	<!--
+	<SearchFilters>				
+		This is where you define what sources in XBMC should be added to the library.
+		<source> - The source to search. The element name can be whatever you want. If the name matches a source in XBMC, you do no need to specify the path attribute.
+			path - This is the actual path that XBMC uses for this source. If you are unsure what the path is, check your sources.xml is your userdata folder. Not needed if source name matches the XBMC source name.			
+			<subfolder> - Each source can have multiple subfolder elements. These are directories that should be scanned and added to the library. 
+				*Note: all of the attributes below can be used at the subfolder level or the source level. If specified at both levels, the subfolder takes precedence.
+						If specified at the source level, the attribute will be inherited by all subfolders.
+						Also, subfolders can be nested inside of other subfolders, and all attributes will be inherited. The name attribute will be appended as you would expect.
+				name - required attribute; The name of the subfolder. (do not include the source name, just the subfolder). Use '/' to seperate folders in the name.
+				type - optional attribute; default=auto determine; This is the type of content in the directory. Only set this if all content in the directory is the same type.
+						If the content type is all known to be TV Shows, use 'episodes';
+						If the content type is all known to be movies Movies/Films, use 'movies' 
+						If the content type is all known to be movies Music Videos, use 'music_videos'
+						If the content type is all known to be none of the above, use 'generic' - This will simply write a directory full of the strm files
+						NOTE: this does not filter the content in the directory; it tells this program what kind of content to expect!
+				recursive - optional attribute; default=false; If true, the directory and all subfolders will be scanned for content. Otherwise only the top directory will be scanned.
+				regex_name - optional, If true, the name attribute wil be evaluated as a regular expression. The regex must match the full actual name of the subfolder. Partial regex matches will be discarded!								
+				force_tvdb - optional, default=false; For episodes only. If true, the season/episode numbers retrieved from the source will be ignored and the show will be looked up on TheTVDB.com. (useful if the source incorrectly/absolutely numbers episodes for some series)
+				max_series - optional attribute; default=unlimited; If TV Shows are in this subfolder, this is the maxinum number of TV series to archive. Useful for Hulu/Popular Shows filtering the top X series you want in your library.
+				max_videos - optional attribute; default=unlimited; This is the maxinum number of episodes/movies/music videos to retrieve from the subfolder.
+				movie_set - optional attribute; default=none; Specifies the name of the movie set to add the movie to; If the movie already belongs to a different set, it will not be changed. (Ignored for TV Episodes/Music Videos). More info: http://wiki.xbmc.org/index.php?title=Movie_Sets
+				movie_tags - optional attribute; default=none; Pipe (|) delimited list of tags to add to the movies. example: movie_tags="Streaming|Netflix"
+				prefix - optional attribute; default=none; This will be prepended to the title of TV Episodes/Music Vidoes (Ignored for movies) in the directory. Can be useful if you want to identify which episodes are from which source.
+				suffix - optional attribute; default=none; This will be appended  to the title of TV Episodes/Music Vidoes (Ignored for movies) in the directory. Can be useful if you want to identify which episodes are from which source.
+				multi_part - optional arrtibute; default=false; Set this to true if the subfolder might contain any multi-part vidoes				
+				force_series - optional attribute; default=none; This will override any series name that gets parsed.
+				<exclude> - optional; If a video's path matches ANY of these, it will be skipped.
+				<filter>  - optional; Only videos that match ALL filters will be included (unless it matched an exclude)
+					<contains> - Matches if the video path contains at least one of the literal texts delimited by double pipes "||" (case-insensitive)
+					<regexp> - Matches if any part of the video path matches this Regular Expression (case-insensitive) - see here for info on regex: http://java.sun.com/developer/technicalArticles/releases/1.4regex/
+					<runtime> - Matches if the runtime of the file fits the criteria specified in seconds along with the relational operator value. The format is "<relational_operator>|<runtime_seconds>". Posible relational operators are: EQ:Equal to, GT:Greater than, LT:Less than, NE:Not equal to, GE:Greater than or equal to, LE:Less than or equal to. Matches only on files and not directories.
+				<parser>  - optional; Overrides the default series and title parser with a regular expression that must contain two defined groups.
+					<regexp> - Pattern must contain two groups like in the following ([\w\s*'-]*):([\w\s*'-]*) example pattern. The first pattern group will interpreted as the series, and the second group as the title. - see here for info on regex: http://java.sun.com/developer/technicalArticles/releases/1.4regex/
+				
+			Note: The exclude/filters filter on the video path. A typical video path looks something like "Hulu/Popular/Popular Episodes/s01e01 - MyTVShow - Pilot"
+			Note: Be careful what you recursively search for. For example, a recursive search of PlayOn's Netflix/Browse Genres returns about 75,000 videos!
+			Note: The '/' character is used exclusively to seperate folders. It cannot otherwise be used in the name attribute (there is currently no way to escape it)			
+			
+	-->
+
+	<SearchFilters>
+		<!--
+		See here for sample search filter configurations: https://docs.google.com/document/d/1CDbdU1GOJlIblwGH8vaJT5c_99lK5H-gRMe3CFpZpUs/edit?hl=en#bookmark=id.g4i0iqa50b0b
+		-->
+		
+		<!--Add your own search filters here!!! -->
+		
+		<!--This is a sample using the BlueCop Hulu plugin -->
+		<NBA path="plugin://plugin.video.nba" recursive="true" regex_name="true" prefix="(H) " >			
+ <subfolder name="Videos" max_videos="10" type="generic" />
+			
+
+	</SearchFilters>
+	
+	<!--
+	These will be used to exclude content from all subfolders.
+	<regexp> - a regular expression to match
+	<contains> - a literal string to match on
+		both are case-insensitive
+	-->
+	<GlobalExcludes>
+		<contains>/No videos available</contains>
+		<regexp>/clip[s]?(/|$)</regexp><!--Prevent TV clip(s) from being archived (only want full episodes)-->		
+		
+		<!--shows that i dont want in my library-->						
+		<contains>Dragon Ball Z</contains>
+		
+	</GlobalExcludes>
+	
+</root>

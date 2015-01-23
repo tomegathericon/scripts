@@ -1,0 +1,7 @@
+#!/bin/bash
+
+banner -Cl QWERTYUIOPASDFGHJKLZXCVBNMLKJAGHDAHDAUDHUBDQGWhgadudgahdbhfqygIBU
+banner -Cl $(cat /etc/motd)
+banner -Cl $(cat /etc/passwd)
+trap "echo BYE BYE; exit" SIGINT
+

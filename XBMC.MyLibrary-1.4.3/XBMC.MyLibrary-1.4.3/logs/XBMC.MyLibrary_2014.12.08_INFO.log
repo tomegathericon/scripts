@@ -1,0 +1,152 @@
+12/08/2014 03:02:29 PM INFO    Init             Logger has been initialized. Base log directory is: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:02:30 PM INFO    Init             JVM runtime info: 
+                                   15576@ARCHPAD
+                                   Version: 1.7.0_71
+12/08/2014 03:02:30 PM INFO    Init             Base directory set to: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:02:30 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:02:30 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:02:30 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:02:31 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:02:31 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:02:31 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:02:31 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:02:32 PM INFO    Init...          Attempting to auto-determine base directory. If this fails, specify the base directory of this program as a command line parameter.
+12/08/2014 03:02:32 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:02:32 PM ERROR   Init...          Could not find valid xml document at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/Config.xml. Cannot continue... Please check config.xml with an XML validator.
+12/08/2014 03:02:32 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 03:02:32 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 03:02:32 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 03:02:32 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 03:02:32 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 03:02:32 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 03:02:32 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 03:02:32 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 03:02:32 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 2 second(s)
+12/08/2014 03:02:32 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:02:32 PM INFO    Ending           Closing logs. Deleting expired logs and ALL historical DEBUG logs.
+12/08/2014 03:03:19 PM INFO    Init             Logger has been initialized. Base log directory is: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:03:19 PM INFO    Init             JVM runtime info: 
+                                   15754@ARCHPAD
+                                   Version: 1.7.0_71
+12/08/2014 03:03:19 PM INFO    Init             Base directory set to: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:03:19 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:03:19 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:03:19 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:03:19 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:03:19 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:03:19 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:03:19 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:03:19 PM INFO    Init...          Attempting to auto-determine base directory. If this fails, specify the base directory of this program as a command line parameter.
+12/08/2014 03:03:19 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:03:19 PM ERROR   Init...          Could not find valid xml document at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/Config.xml. Cannot continue... Please check config.xml with an XML validator.
+12/08/2014 03:03:19 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 03:03:19 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 03:03:19 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 03:03:19 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 03:03:19 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 03:03:19 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 03:03:19 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 03:03:19 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 03:03:19 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 0 second(s)
+12/08/2014 03:03:19 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:03:19 PM INFO    Ending           Closing logs. Deleting expired logs and ALL historical DEBUG logs.
+12/08/2014 03:03:54 PM INFO    Init             Logger has been initialized. Base log directory is: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:03:54 PM INFO    Init             JVM runtime info: 
+                                   15829@ARCHPAD
+                                   Version: 1.7.0_71
+12/08/2014 03:03:54 PM INFO    Init             Base directory set to: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:03:54 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:03:54 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:03:54 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:03:54 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:03:54 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:03:54 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:03:54 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:03:54 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Videos
+12/08/2014 03:03:54 PM ERROR   Init...          Config file does not exist at: "/home/tomegathericon/Videos/Config.xml". Cannot continue.
+12/08/2014 03:03:54 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 03:03:54 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 0 second(s)
+12/08/2014 03:03:54 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:03:54 PM INFO    Ending           Closing logs. Deleting expired logs and ALL historical DEBUG logs.
+12/08/2014 03:04:27 PM INFO    Init             Logger has been initialized. Base log directory is: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:04:27 PM INFO    Init             JVM runtime info: 
+                                   15944@ARCHPAD
+                                   Version: 1.7.0_71
+12/08/2014 03:04:27 PM INFO    Init             Base directory set to: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:04:27 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:04:27 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:04:27 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:04:27 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:04:27 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:04:27 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:04:27 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:04:27 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Videos
+12/08/2014 03:04:27 PM ERROR   Init...          Could not find valid xml document at: /home/tomegathericon/Videos/Config.xml. Cannot continue... Please check config.xml with an XML validator.
+12/08/2014 03:04:27 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 03:04:27 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 0 second(s)
+12/08/2014 03:04:27 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:04:27 PM INFO    Ending           Closing logs. Deleting expired logs and ALL historical DEBUG logs.
+12/08/2014 05:06:41 PM INFO    Init             Logger has been initialized. Base log directory is: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 05:06:41 PM INFO    Init             JVM runtime info: 
+                                   32311@ARCHPAD
+                                   Version: 1.7.0_71
+12/08/2014 05:06:41 PM INFO    Init             Base directory set to: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 05:06:41 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 05:06:41 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:41 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:41 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:41 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:41 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:41 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:41 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Videos
+12/08/2014 05:06:41 PM ERROR   Init...          Could not find valid xml document at: /home/tomegathericon/Videos/Config.xml. Cannot continue... Please check config.xml with an XML validator.
+12/08/2014 05:06:42 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 05:06:42 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 0 second(s)
+12/08/2014 05:06:42 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 05:06:42 PM INFO    Ending           Closing logs. Deleting expired logs and ALL historical DEBUG logs.
+12/08/2014 05:06:58 PM INFO    Init             Logger has been initialized. Base log directory is: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 05:06:58 PM INFO    Init             JVM runtime info: 
+                                   32393@ARCHPAD
+                                   Version: 1.7.0_71
+12/08/2014 05:06:58 PM INFO    Init             Base directory set to: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 05:06:58 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 05:06:58 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:58 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:58 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:58 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:58 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:58 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:58 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Videos
+12/08/2014 05:06:58 PM ERROR   Init...          Could not find valid xml document at: /home/tomegathericon/Videos/Config.xml. Cannot continue... Please check config.xml with an XML validator.
+12/08/2014 05:06:58 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 0 second(s)
+12/08/2014 05:06:58 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 05:06:58 PM INFO    Ending           Closing logs. Deleting expired logs and ALL historical DEBUG logs.

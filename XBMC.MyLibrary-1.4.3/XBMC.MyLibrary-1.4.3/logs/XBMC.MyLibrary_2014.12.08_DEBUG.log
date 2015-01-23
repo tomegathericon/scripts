@@ -1,0 +1,220 @@
+12/08/2014 03:03:54 PM INFO    Init             Logger has been initialized. Base log directory is: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:03:54 PM INFO    Init             JVM runtime info: 
+                                   15829@ARCHPAD
+                                   Version: 1.7.0_71
+12/08/2014 03:03:54 PM DEBUG   Init             Logger options are: 
+                                   levelToLogAt: INFO
+                                   isSingleInstance: true
+                                   singleInstanceport: 52872
+                                   singleInstanceTimeout: -1
+                                   logToSystemOut: true
+                                   logToMemory: true
+                                   logToCurrentFile: true
+                                   logToHistoryFile: true
+                                   logExpireDays: 14
+                                   
+12/08/2014 03:03:54 PM INFO    Init             Base directory set to: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:03:54 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:03:54 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:03:54 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:03:54 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = CREATE TABLE IF NOT EXISTS ArchivedFiles (id INTEGER PRIMARY KEY AUTOINCREMENT , source_name NOT NULL, dropbox_location NOT NULL, original_path NOT NULL, date_archived TIMESTAMP NOT NULL, missing_since TIMESTAMP, missing_count INTEGER)
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = CREATE UNIQUE INDEX IF NOT EXISTS unique_dropbox_location ON ArchivedFiles (dropbox_location)
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:03:54 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:03:54 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:03:54 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = CREATE table if not exists QueuedChanges (id INTEGER PRIMARY KEY AUTOINCREMENT , dropbox_location NOT NULL, video_type NOT NULL, meta_data_type NOT NULL, value NOT NULL, status NOT NULL)
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = CREATE UNIQUE INDEX IF NOT EXISTS unique_queued_change ON QueuedChanges (dropbox_location, meta_data_type)
+12/08/2014 03:03:54 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:03:54 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:03:54 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:03:54 PM DEBUG   Init...          SQL = create table if not exists APIQueries (id INTEGER PRIMARY KEY AUTOINCREMENT , api_name NOT NULL, query_url NOT NULL, query_time TIMESTAMP NOT NULL)
+12/08/2014 03:03:54 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Videos
+12/08/2014 03:03:54 PM ERROR   Init...          Config file does not exist at: "/home/tomegathericon/Videos/Config.xml". Cannot continue.
+12/08/2014 03:03:54 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 03:03:54 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 03:03:54 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 0 second(s)
+12/08/2014 03:03:54 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:03:54 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:03:54 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:03:54 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:03:54 PM INFO    Ending           Closing logs. Deleting expired logs and ALL historical DEBUG logs.
+12/08/2014 03:04:27 PM INFO    Init             Logger has been initialized. Base log directory is: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:04:27 PM INFO    Init             JVM runtime info: 
+                                   15944@ARCHPAD
+                                   Version: 1.7.0_71
+12/08/2014 03:04:27 PM DEBUG   Init             Logger options are: 
+                                   levelToLogAt: INFO
+                                   isSingleInstance: true
+                                   singleInstanceport: 52872
+                                   singleInstanceTimeout: -1
+                                   logToSystemOut: true
+                                   logToMemory: true
+                                   logToCurrentFile: true
+                                   logToHistoryFile: true
+                                   logExpireDays: 14
+                                   
+12/08/2014 03:04:27 PM INFO    Init             Base directory set to: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 03:04:27 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:04:27 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:04:27 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:04:27 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = CREATE TABLE IF NOT EXISTS ArchivedFiles (id INTEGER PRIMARY KEY AUTOINCREMENT , source_name NOT NULL, dropbox_location NOT NULL, original_path NOT NULL, date_archived TIMESTAMP NOT NULL, missing_since TIMESTAMP, missing_count INTEGER)
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = CREATE UNIQUE INDEX IF NOT EXISTS unique_dropbox_location ON ArchivedFiles (dropbox_location)
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 03:04:27 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:04:27 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:04:27 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = CREATE table if not exists QueuedChanges (id INTEGER PRIMARY KEY AUTOINCREMENT , dropbox_location NOT NULL, video_type NOT NULL, meta_data_type NOT NULL, value NOT NULL, status NOT NULL)
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = CREATE UNIQUE INDEX IF NOT EXISTS unique_queued_change ON QueuedChanges (dropbox_location, meta_data_type)
+12/08/2014 03:04:27 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:04:27 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:04:27 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:04:27 PM DEBUG   Init...          SQL = create table if not exists APIQueries (id INTEGER PRIMARY KEY AUTOINCREMENT , api_name NOT NULL, query_url NOT NULL, query_time TIMESTAMP NOT NULL)
+12/08/2014 03:04:27 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Videos
+12/08/2014 03:04:27 PM ERROR   Init...          Could not find valid xml document at: /home/tomegathericon/Videos/Config.xml. Cannot continue... Please check config.xml with an XML validator.
+12/08/2014 03:04:27 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 03:04:27 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 03:04:27 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 0 second(s)
+12/08/2014 03:04:27 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 03:04:27 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 03:04:27 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 03:04:27 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 03:04:27 PM INFO    Ending           Closing logs. Deleting expired logs and ALL historical DEBUG logs.
+12/08/2014 05:06:41 PM INFO    Init             Logger has been initialized. Base log directory is: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 05:06:41 PM INFO    Init             JVM runtime info: 
+                                   32311@ARCHPAD
+                                   Version: 1.7.0_71
+12/08/2014 05:06:41 PM DEBUG   Init             Logger options are: 
+                                   levelToLogAt: INFO
+                                   isSingleInstance: true
+                                   singleInstanceport: 52872
+                                   singleInstanceTimeout: -1
+                                   logToSystemOut: true
+                                   logToMemory: true
+                                   logToCurrentFile: true
+                                   logToHistoryFile: true
+                                   logExpireDays: 14
+                                   
+12/08/2014 05:06:41 PM INFO    Init             Base directory set to: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 05:06:41 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 05:06:41 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:41 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:41 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = CREATE TABLE IF NOT EXISTS ArchivedFiles (id INTEGER PRIMARY KEY AUTOINCREMENT , source_name NOT NULL, dropbox_location NOT NULL, original_path NOT NULL, date_archived TIMESTAMP NOT NULL, missing_since TIMESTAMP, missing_count INTEGER)
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = CREATE UNIQUE INDEX IF NOT EXISTS unique_dropbox_location ON ArchivedFiles (dropbox_location)
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:41 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:41 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:41 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = CREATE table if not exists QueuedChanges (id INTEGER PRIMARY KEY AUTOINCREMENT , dropbox_location NOT NULL, video_type NOT NULL, meta_data_type NOT NULL, value NOT NULL, status NOT NULL)
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = CREATE UNIQUE INDEX IF NOT EXISTS unique_queued_change ON QueuedChanges (dropbox_location, meta_data_type)
+12/08/2014 05:06:41 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:41 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:41 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:41 PM DEBUG   Init...          SQL = create table if not exists APIQueries (id INTEGER PRIMARY KEY AUTOINCREMENT , api_name NOT NULL, query_url NOT NULL, query_time TIMESTAMP NOT NULL)
+12/08/2014 05:06:41 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Videos
+12/08/2014 05:06:41 PM ERROR   Init...          Could not find valid xml document at: /home/tomegathericon/Videos/Config.xml. Cannot continue... Please check config.xml with an XML validator.
+12/08/2014 05:06:42 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 05:06:42 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 05:06:42 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 0 second(s)
+12/08/2014 05:06:42 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:42 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:42 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:42 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 05:06:42 PM INFO    Ending           Closing logs. Deleting expired logs and ALL historical DEBUG logs.
+12/08/2014 05:06:58 PM INFO    Init             Logger has been initialized. Base log directory is: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 05:06:58 PM INFO    Init             JVM runtime info: 
+                                   32393@ARCHPAD
+                                   Version: 1.7.0_71
+12/08/2014 05:06:58 PM DEBUG   Init             Logger options are: 
+                                   levelToLogAt: INFO
+                                   isSingleInstance: true
+                                   singleInstanceport: 52872
+                                   singleInstanceTimeout: -1
+                                   logToSystemOut: true
+                                   logToMemory: true
+                                   logToCurrentFile: true
+                                   logToHistoryFile: true
+                                   logExpireDays: 14
+                                   
+12/08/2014 05:06:58 PM INFO    Init             Base directory set to: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3
+12/08/2014 05:06:58 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 05:06:58 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:58 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:58 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = CREATE TABLE IF NOT EXISTS ArchivedFiles (id INTEGER PRIMARY KEY AUTOINCREMENT , source_name NOT NULL, dropbox_location NOT NULL, original_path NOT NULL, date_archived TIMESTAMP NOT NULL, missing_since TIMESTAMP, missing_count INTEGER)
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = CREATE UNIQUE INDEX IF NOT EXISTS unique_dropbox_location ON ArchivedFiles (dropbox_location)
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = PRAGMA table_info(ArchivedFiles)
+12/08/2014 05:06:58 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:58 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:58 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = CREATE table if not exists QueuedChanges (id INTEGER PRIMARY KEY AUTOINCREMENT , dropbox_location NOT NULL, video_type NOT NULL, meta_data_type NOT NULL, value NOT NULL, status NOT NULL)
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = CREATE UNIQUE INDEX IF NOT EXISTS unique_queued_change ON QueuedChanges (dropbox_location, meta_data_type)
+12/08/2014 05:06:58 PM INFO    Init...          Initializing SQLite database at: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:58 PM DEBUG   Init...          Opening SQLite connection using: jdbc:sqlite:/home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:58 PM INFO    Init...          Successfully connected to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:58 PM DEBUG   Init...          SQL = create table if not exists APIQueries (id INTEGER PRIMARY KEY AUTOINCREMENT , api_name NOT NULL, query_url NOT NULL, query_time TIMESTAMP NOT NULL)
+12/08/2014 05:06:58 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Videos
+12/08/2014 05:06:58 PM ERROR   Init...          Could not find valid xml document at: /home/tomegathericon/Videos/Config.xml. Cannot continue... Please check config.xml with an XML validator.
+12/08/2014 05:06:58 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 0 second(s)
+12/08/2014 05:06:58 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/QueuedMetaDataChanges.db
+12/08/2014 05:06:58 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/ArchivedFiles.db
+12/08/2014 05:06:58 PM DEBUG   Ending           Closed connection to SQLITE database: /home/tomegathericon/Scripts/XBMC.MyLibrary-1.4.3/XBMC.MyLibrary-1.4.3/res/scraper.db
+12/08/2014 05:06:58 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 05:06:58 PM INFO    Ending           Closing logs. Deleting expired logs and ALL historical DEBUG logs.

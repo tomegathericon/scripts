@@ -1,0 +1,71 @@
+#!/bin/bash
+
+#Script to populate /etc/motd
+#Runs in sync .bashrc
+
+
+##### VARIABLE DECLARATION #####
+
+motd=/etc/motd
+Hostname=$(uname -n)
+PType=$(uname -m)
+lu=$(last -w | awk NR==1 | awk '{print $1}')
+hour=$(date +%H)
+cip=$(finger | grep $(date +%H:%M) | awk '{print $6}' | sed 's/(/ /' | sed 's/)/ /')
+
+
+##### SALUTATION DECLARATION #####
+if [ $hour -gt 5 -a $hour -lt 12 ];  then
+
+salutation="Good Morning $( last -w | awk NR==1 | awk '{print $1}' | sed 's/^\(.\)/\U\1/')"
+
+elif [ $hour -ge 12 -a $hour -lt 16 ]; then
+
+salutation="Good Afternoon $( last -w | awk NR==1 | awk '{print $1}' | sed 's/^\(.\)/\U\1/')"
+
+elif [ $hour -ge 16 -a $hour -lt 21 ]; then
+
+salutation="Good Evening $( last -w | awk NR==1 | awk '{print $1}' | sed 's/^\(.\)/\U\1/')"
+
+else
+
+#elif [21 < $hour < 5]; then
+
+salutation="You Should Be Sleeping $( last -w | awk NR==1 | awk '{print $1}' | sed 's/^\(.\)/\U\1/')"
+
+fi
+
+
+##### BODY #####
+
+echo -e "
+$(linux_logo)
+
+$salutation
+
+     ********************************************************************************************
+		USER 	                    $lu
+		SERVER	                    $Hostname
+		PROCESSOR                   $PType
+		LAST LOGIN IP	            $(last -w | grep $lu | awk NR==2 | awk '{print $3}')
+		CURRENT LOGIN IP            $(last -w | grep $lu | awk NR==1 | awk '{print $3}')
+		SYSTEM IP                   1.1.1.77 
+		PUBLIC IP                   $(wget -qO- http://ipecho.net/plain)
+		SYSTEM UPTIME               $(uptime | awk '{print $3,$4,$5}'|  sed s/,//g) Hours
+		CURRENT TIME                $(date)
+		INSERTED DEVICES            $(lsblk -sdn | grep sd[b-z] | awk '{print$1}' | sed 'N;s/\n/ /')
+		DISK SPACE USED             $(df -h | grep sda1 | awk '{print $3}' | sed s/G/" GB"/)
+		DISK SPACE AVAILABLE        $(df -h | grep sda1 | awk '{print $4}' | sed s/G/" GB"/)
+		SYSTEM TEMPERATURE          $(acpi -t | awk '{print $4, $5, $6}')
+		UPDATES AVAILABLE           $(pacman -Qu | wc -l)
+		DISK SMART STATUS           $(sudo smartctl -a /dev/sda1 | grep Errors)
+     *********************************************************************************************
+	
+    " > $motd
+	
+
+###############WEATHER SCRIPT#############
+
+#CURRENT TEMPEARTURE         $(weather vidp | grep Temperature | awk '{print $4, $5}' | sed 's/(/ /' | sed 's/)/ /')
+
+#LABELS				        $(ls --format=comma /dev/disk/by-label/)

@@ -1,0 +1,41 @@
+#!/bin/bash
+
+#Script To Restart A List Of Services  
+#To Be Run Manually
+
+echo -e "Please Chose From The Following Options To Stop The Desired Services"
+
+echo -e " 1) Apache\n 2) FTP\n 3) Samba\n 4) Cron\n 5) Mediatomb\n 6) Deluge WebUI\n 7) All Of The Above"
+
+read restart
+
+case $restart in
+
+1 ) sudo /etc/init.d/apache2 restart 
+    ;;
+2 ) sudo /etc/init.d/vsftpd restart
+    ;;
+3 ) sudo /etc/init.d/samba restart
+    ;;
+4 )  sudo /etc/init.d/cronie restart
+    ;;
+5 ) sudo /etc/init.d/mediatomb restart 
+    ;;
+6 ) pkill deluge-web
+    ;;
+
+7 ) sudo /etc/init.d/apache2 restart &
+    sudo /etc/init.d/vsftpd restart &
+    sudo /etc/init.d/samba restart &
+    sudo /etc/init.d/cronie restart &
+    sudo /etc/init.d/mediatomb restart &
+    pkill deluge-web &
+    deluge-web -f
+    ;;
+
+* ) echo -e " You entered $restart which is not in the above options. 
+              Please run restart again and ensure correct usage"
+esac
+
+echo -e "Aria should be restarted manually by specifying the command pkill aria2c && aria -D"
+

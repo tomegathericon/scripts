@@ -1,0 +1,2 @@
+12/08/2014 05:06:58 PM ERROR   Init...          Could not find valid xml document at: /home/tomegathericon/Videos/Config.xml. Cannot continue... Please check config.xml with an XML validator.
+12/08/2014 05:06:58 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml

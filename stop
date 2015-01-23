@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#Script To Stop A List Of Services  
+#To Be Run Manually
+
+echo -e "Please Chose From The Following Options To Stop The Desired Services"
+
+echo -e " 1) Apache\n 2) FTP\n 3) Samba\n 4) Cron\n 5) Mediatomb\n 6) Deluge WebUI\n 7) All Of The Above"
+
+read stop
+
+case $stop in
+
+1 ) sudo /etc/init.d/apache2 stop 
+    ;;
+2 ) sudo /etc/init.d/vsftpd stop
+    ;;
+3 ) sudo /etc/init.d/samba stop
+    ;;
+4 )  sudo /etc/init.d/cronie stop
+    ;;
+5 ) sudo /etc/init.d/mediatomb stop 
+    ;;
+6 ) pkill deluge-web
+    ;;
+
+7 ) sudo /etc/init.d/apache2 stop &
+    sudo /etc/init.d/vsftpd stop &
+    sudo /etc/init.d/samba stop &
+    sudo /etc/init.d/cronie stop &
+    sudo /etc/init.d/mediatomb stop &
+    pkill deluge-web
+    ;;
+
+* ) echo -e " You entered $stop which is not in the above options. 
+              Please run stop again and ensure correct usage"
+esac
+
+echo -e "Aria should be stopped manually by specifying the command pkill aria2c"
+

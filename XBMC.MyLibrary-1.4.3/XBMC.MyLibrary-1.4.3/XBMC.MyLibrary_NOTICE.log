@@ -1,0 +1,13 @@
+12/08/2014 05:06:58 PM NOTICE  Init...          Start XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo
+12/08/2014 05:06:58 PM NOTICE  Init...          Base program directory = /home/tomegathericon/Videos
+12/08/2014 05:06:58 PM ERROR   Init...          Could not find valid xml document at: /home/tomegathericon/Videos/Config.xml. Cannot continue... Please check config.xml with an XML validator.
+12/08/2014 05:06:58 PM ERROR   Init...          Failed while loading Configuration and testing connections... cannot continue. Please check your settings in Config.xml
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa ----------------------Archiving Summary for ---Overall-------------------------
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa TV Success: 0, TV Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Movie Success: 0, Movie Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Music Video Success: 0, Music Video Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Generic Success: 0, Generic Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa New videos archived: 0, existing videos updated: 0
+12/08/2014 05:06:58 PM NOTICE  Summary:---Overa Overall: Success: 0, Skip: 0, Fail: 0
+12/08/2014 05:06:58 PM NOTICE  Ending           Done... Total processing time: 0 minute(s), 0 second(s)
+12/08/2014 05:06:58 PM NOTICE  Ending           Ended: XBMC.MyLibrary, v1.4.3, compatible with XBMC Frodo

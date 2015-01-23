@@ -1,0 +1,86 @@
+#!/bin/bash
+
+#Script To Start List Of Services  
+#To Be Run Manually
+
+CE=$(printenv | grep screen)
+
+function interrupt_msg {
+                         echo -e "\nDo You Really Want To Interrupt"
+                         read -p "Please confirm(y/n)" input
+                         if [ $input == y ] ; then
+                             exit
+                         elif [ $input == Y ] ; then
+                             exit
+                         fi
+
+                     }
+                        
+
+if [ -z $CE ]; then
+
+trap interrupt_msg SIGINT    
+echo -e "Please Chose From The Following Options To Start The Desired Services"
+
+echo -e " 1)Web Server\n 2)NFS Server\n 3)Samba\n 4)Webmin\n 5)FTP Server\n 6)MySQL Server\n 7)Mail Server\n 8)Print Server\n 9)VNC Server\n 10)VNC Web\n 11)All Of The Above"
+
+read -p "Please Enter Your Choice" start
+#tput cud1
+
+case $start in
+
+1 ) sudo systemctl start httpd
+    ;;
+2 ) sudo systemctl start nfs-server
+    ;;
+3 ) sudo systemctl start smbd &
+    sudo systemctl start nmbd &
+    sudo systemctl start samba
+    ;;
+#4 )  sudo /etc/init.d/cronie start
+ #   ;;
+#4 ) sudo systemctl start pms@tomegathericon 
+#    ;;
+4 ) sudo systemctl start webmin
+    ;;
+
+5 ) sudo systemctl start ftpd
+    ;;
+
+6 ) sudo systemctl start mysqld
+    ;;
+7 ) sudo systemctl start postfix
+    ;;
+
+8 ) sudo cupsd
+    ;;
+9 ) vncserver -alwaysshared :1
+    ;;
+10 ) vnc_web_launch --vnc kapoorabhishek.asia:5901    
+    ;;
+11) sudo systemctl start httpd &
+    sudo systemctl start nfs-server  &
+    sudo systemctl start smbd &
+    sudo systemctl start nmbd &
+    sudo systemctl start samba &
+    sudo systemctl start ftpd &
+    sudo systemctl start webmin &
+    sudo systemctl start postfix &
+    sudo systemctl start mysqld
+    sudo cupsd
+    vncserver -alwaysshared :1
+    vnc_web_launch --vnc kapoorabhishek.asia:5901
+     ;;
+
+* ) echo -e " You entered $start which is not in the above options. 
+ Please run start again and ensure correct usage"
+esac
+
+else
+
+echo -e " Please exit your terminal multiplexer to run this script "
+
+fi
+
+#echo -e "Aria should be started manually by specifying the command aria -D"
+
