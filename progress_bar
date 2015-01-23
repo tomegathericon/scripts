@@ -2,7 +2,7 @@
 
 #!/bin/bash
    
-for ((i = 1;i < 50; ++i)); do
+for ((i = 1;i < $(tput cols); ++i)); do
      echo -n "*"  
      sleep .01 
      done      
