@@ -3,18 +3,36 @@
 #Script is meant to minimize the work for a git user. It presents the user with an option to run basic git commands such as push and pull.
 ##Soon to be added : Init & Diff
 
+################################VARIABLE DECLARATION#############################
+hour=$(date +%H)
+################################VARIABLE DECLARATION#############################
 ################################FUNCTION DECLARATION#############################
+
+function salutation {
+    tput setaf 4
+    if [ $hour -gt 5 -a $hour -lt 12 ];  then
+        echo -e "Good Morning $(whoami)"
+        elif [ $hour -ge 12 -a $hour -lt 16 ]; then
+        echo -e "Good Afternoon $(whoami)"
+        elif [ $hour -ge 16 -a $hour -lt 21 ]; then
+        echo -e "Good Evening $(whoami)"
+        else          
+        echo -e "You Should Be Sleeping $(whoami)"     
+        fi 
+        tput sgr0
+        }   
+
 function add_file { 
   select FILENAME in *;
   do
   git add $REPLY
   done
   }
-################################FUNCTION DECLARATION#############################
 
-################################VARIABLE DECLARATION#############################
-################################VARIABLE DECLARATION#############################
-echo -e "Hello $(whoami)"
+  
+################################FUNCTION DECLARATION#############################
+salutation
+#echo -e "Hello $(whoami)"
 sleep 2
 read -p "Please enter the path of your Git Master directory > " dir_path
 cd $dir_path
