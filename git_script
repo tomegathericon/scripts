@@ -1,7 +1,11 @@
 
 #!/bin/bash
-
-git add *
+function add_file { 
+  select FILENAME in *;
+  do
+  git add $REPLY
+  }
+add_file  
 read -p "Please enter your commit message > " msg
 git commit -m "$msg"
 git push origin master
