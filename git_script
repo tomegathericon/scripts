@@ -17,6 +17,7 @@ function add_file {
 read -p "Please enter the path of your Git Master directory > " dir_path
 cd $dir_path
 echo -e "You are currently at $(pwd)"
+break
 echo -e "Please enter the file you want to push"  
 add_file  
 read -p "Please enter your commit message > " msg
