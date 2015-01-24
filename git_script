@@ -17,6 +17,7 @@ function salutation {
     tput clear
     tput cup $((height/2 )) $((width/2 ))
     tput cub 10 
+    tput bold
     tput setaf 2 
     if [ $v1 -gt 5 -a $v1 -lt 12 ];  then
         echo -e "GOOD MORNING $(whoami | tr '[:lower:]' '[:upper:]')"   
@@ -31,13 +32,24 @@ function salutation {
         } 
 function ask_origin {
     tput clear
-    tput cup 0 $((width/2))
+    tput cup 5 $((width/2))
     tput cub 10
-    echo -e "Please select your Git Master Folder >"
+    tput setaf 5
+    tput bold
+    echo -e "Searching for Directories containing .git files in the current system"
+    tput sgr0
+    progress_bar
+    tput rev
+    tput setaf 5
+    echo -e "I have found these directories, please chose your Git Master Folder >"
+    tput sgr0
+    tput cud 10
     cd /
     select ao in $v2 ;
     do
-    cd $REPLY    
+    cd $ao
+    echo -e "We are now at $(pwd)"
+    break
     done
 }        
 function add_file { 
@@ -46,7 +58,17 @@ function add_file {
   git add $REPLY
   done
   }
+
 function progress_bar {
+    tput cud 5 
+    for ((i = 0 ;i < $width; ++i)); do
+    echo -n "#"
+    sleep 0.01
+    done
+    tput sgr0
+    }
+
+function progress_bar_bottom {
     tput cup $height 0 
     for ((i = 1;i < $width; ++i)); do
     echo -n "#"
@@ -57,8 +79,9 @@ function progress_bar {
   
 ################################FUNCTION DECLARATION#############################
 salutation
-progress_bar
+progress_bar_bottom
 ask_origin
+exit
 read -p "Please enter the path of your Git Master directory > " dir_path
 cd $dir_path
 echo -e "We are now at $(pwd)"
