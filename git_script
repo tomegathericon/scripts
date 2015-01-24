@@ -22,7 +22,13 @@ function salutation {
         echo -e "You Should Be Sleeping $(whoami)"     
         fi 
         tput sgr0
-        }   
+        } 
+function ask_origin {
+    cd /
+    select ao in $(locate .git);
+    do
+    done
+}        
 function add_file { 
   select FILENAME in *;
   do
