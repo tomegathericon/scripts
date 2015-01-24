@@ -17,15 +17,15 @@ function salutation {
     tput clear
     tput cup $((height/2 )) $((width/2 ))
     tput cub 10 
-    tput setaf 6
+    tput setaf 2 
     if [ $v1 -gt 5 -a $v1 -lt 12 ];  then
-        echo -e "Good Morning $(whoami)"
+        echo -e "GOOD MORNING $(whoami | tr '[:lower:]' '[:upper:]')"   
         elif [ $v1 -ge 12 -a $v1 -lt 16 ]; then
-        echo -e "Good Afternoon $(whoami)"
+        echo -e "GOOD AFTERNOON $(whoami | tr '[:lower:]' '[:upper:]')"    
         elif [ $v1 -ge 16 -a $v1 -lt 21 ]; then
-        echo -e "Good Evening $(whoami)"
+        echo -e "GOOD EVENING $(whoami | tr '[:lower:]' '[:upper:]')"
         else          
-        echo -e "You Should Be Sleeping $(whoami)"     
+        echo -e "YOU SHOULD BE SLEEPING  $(whoami | tr '[:lower:]' '[:upper:]')"     
         fi 
     tput sgr0
         } 
