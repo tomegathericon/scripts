@@ -11,7 +11,7 @@ hour=$(date +%H)
 ################################FUNCTION DECLARATION#############################
 
 function salutation {
-    tput setaf 4
+    tput setaf 6
     if [ $hour -gt 5 -a $hour -lt 12 ];  then
         echo -e "Good Morning $(whoami)"
         elif [ $hour -ge 12 -a $hour -lt 16 ]; then
@@ -29,7 +29,7 @@ function add_file {
   git add $REPLY
   done
   }
-function progress_bar{
+function progress_bar {
     for ((i = 1;i < $(tput cols); ++i)); do
     echo -n "#"
     sleep 0.01
