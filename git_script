@@ -7,6 +7,7 @@
 
 ################################VARIABLE DECLARATION#############################
 hour=$(date +%H)
+int a
 ################################VARIABLE DECLARATION#############################
 ################################FUNCTION DECLARATION#############################
 
@@ -29,7 +30,7 @@ function add_file {
   git add $REPLY
   done
   }
-function progress_bar(int a) {
+function progress_bar(int) {
     for ((i = 1;i < $(tput cols); ++i)); do
     echo -n "#"
     sleep a
