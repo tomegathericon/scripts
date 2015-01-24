@@ -12,11 +12,21 @@ height=$(tput lines)
 width=$(tput cols)
 ################################VARIABLE DECLARATION#############################
 ################################FUNCTION DECLARATION#############################
+
+function author_info {
+    echo -e "
+              Author = Tomegathericon
+              Email-ID = kapoor.abhishek@outlook.com
+              "
+
+}
+
+
 function progress_bar {
     tput cud 5 
     for ((i = 0 ;i < $width; ++i)); do
     echo -n "#"
-    sleep 0.01
+    sleep 0.05
     done
     tput sgr0
     }
@@ -32,8 +42,7 @@ function progress_bar_bottom {
   
 function salutation {
     tput clear
-    tput cup $((height/2 )) $((width/2 ))
-    tput cub 10 
+    tput cup $((height/2 )) 60 
     tput bold
     tput setaf 2 
     if [ $v1 -gt 5 -a $v1 -lt 12 ];  then
@@ -46,18 +55,19 @@ function salutation {
         echo -e "YOU SHOULD BE SLEEPING  $(whoami | tr '[:lower:]' '[:upper:]')"     
         fi 
     tput sgr0
-        } 
+        }
+
 function ask_origin {
     tput clear
-    tput cup 5 $((width/2))
-    tput cub 10
+    tput cup 5 $((width/2)) 
+    tput cub 40
     tput setaf 5
     tput bold
     echo -e "Searching for Directories containing .git files in the current system"
     tput sgr0
     progress_bar
     tput rev
-    tput setaf 5
+    tput setaf 7 
     echo -e "I have found these directories, please chose your Git Master Folder >"
     tput sgr0
     tput cud 10
@@ -68,26 +78,44 @@ function ask_origin {
     echo -e "We are now at $(pwd)"
     break
     done
-}        
+}
+
+function choice {
+    echo -e "I am now at your Git Master DIrectory. How do you want me to assist you?"
+    tput cud 1
+    echo -e "Currently I can perform the following two actions : "
+    tput cud 1
+    echo -e "1) Push\n 2) Pull"
+    read -p "Please choose : " choose
+    case $choose in
+   } 
 function add_file { 
-  select FILENAME in *;
-  do
-  git add $REPLY
-  done
+    echo -e "Please enter the file you want to push"  
+    select FILENAME in *;
+    do
+    git add $FILENAME
+    done
   }
 
+function commit_msg {
+    read -p "Please enter your commit message > " msg
+    git commit -m "$msg"
+  }
+
+ function git_push {
+     git push origin master
+ }
+
+ function git_pull {
+     git pull origin master
+ }
 
 ################################FUNCTION DECLARATION#############################
 salutation
+author_info
 progress_bar_bottom
 ask_origin
 exit
-read -p "Please enter the path of your Git Master directory > " dir_path
-cd $dir_path
-echo -e "We are now at $(pwd)"
-exit
-echo -e "Please enter the file you want to push"  
-add_file  
-read -p "Please enter your commit message > " msg
-git commit -m "$msg"
-git push origin master
+add_file
+commit_msg
+
