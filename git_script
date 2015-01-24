@@ -25,8 +25,9 @@ function salutation {
         } 
 function ask_origin {
     cd /
-    select ao in $(locate .git);
+    select ao in $(locate .git | grep -w "git"  );
     do
+    cd $REPLY    
     done
 }        
 function add_file { 
@@ -46,6 +47,7 @@ function progress_bar {
 salutation
 #sleep 2
 progress_bar
+ask_origin
 read -p "Please enter the path of your Git Master directory > " dir_path
 cd $dir_path
 echo -e "We are now at $(pwd)"
