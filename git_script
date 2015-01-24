@@ -12,7 +12,24 @@ height=$(tput lines)
 width=$(tput cols)
 ################################VARIABLE DECLARATION#############################
 ################################FUNCTION DECLARATION#############################
+function progress_bar {
+    tput cud 5 
+    for ((i = 0 ;i < $width; ++i)); do
+    echo -n "#"
+    sleep 0.01
+    done
+    tput sgr0
+    }
 
+function progress_bar_bottom {
+    tput cup $height 0 
+    for ((i = 1;i < $width; ++i)); do
+    echo -n "#"
+    sleep 0.01
+    done
+    tput sgr0
+    }
+  
 function salutation {
     tput clear
     tput cup $((height/2 )) $((width/2 ))
@@ -59,24 +76,7 @@ function add_file {
   done
   }
 
-function progress_bar {
-    tput cud 5 
-    for ((i = 0 ;i < $width; ++i)); do
-    echo -n "#"
-    sleep 0.01
-    done
-    tput sgr0
-    }
 
-function progress_bar_bottom {
-    tput cup $height 0 
-    for ((i = 1;i < $width; ++i)); do
-    echo -n "#"
-    sleep 0.01
-    done
-    tput sgr0
-    }
-  
 ################################FUNCTION DECLARATION#############################
 salutation
 progress_bar_bottom
