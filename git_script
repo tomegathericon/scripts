@@ -7,7 +7,7 @@
 
 ################################VARIABLE DECLARATION#############################
 v1=$(date +%H)
-v2=$(locate .git | grep -w "git") 
+v2=$(locate .git | grep -w ".git" | xargs -n 1 dirname) 
 ################################VARIABLE DECLARATION#############################
 ################################FUNCTION DECLARATION#############################
 
