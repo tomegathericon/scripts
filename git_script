@@ -1,5 +1,7 @@
 
 #!/bin/bash
+#author: tomegathericon
+#email : kapoor.abhishek@outlook.com
 #Script is meant to minimize the work for a git user. It presents the user with an option to run basic git commands such as push and pull.
 ##Soon to be added : Init & Diff
 
@@ -21,19 +23,23 @@ function salutation {
         fi 
         tput sgr0
         }   
-
 function add_file { 
   select FILENAME in *;
   do
   git add $REPLY
   done
   }
-
+function progress_bar(int a) {
+    for ((i = 1;i < $(tput cols); ++i)); do
+    echo -n "#"
+    sleep a
+    done
+    }
   
 ################################FUNCTION DECLARATION#############################
 salutation
-#echo -e "Hello $(whoami)"
-sleep 2
+#sleep 2
+progress_bar(0.01)
 read -p "Please enter the path of your Git Master directory > " dir_path
 cd $dir_path
 echo -e "We are now at $(pwd)"
