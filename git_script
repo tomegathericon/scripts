@@ -7,7 +7,6 @@
 
 ################################VARIABLE DECLARATION#############################
 hour=$(date +%H)
-int a
 ################################VARIABLE DECLARATION#############################
 ################################FUNCTION DECLARATION#############################
 
@@ -30,17 +29,17 @@ function add_file {
   git add $REPLY
   done
   }
-function progress_bar(int) {
+function progress_bar{
     for ((i = 1;i < $(tput cols); ++i)); do
     echo -n "#"
-    sleep a
+    sleep 0.01
     done
     }
   
 ################################FUNCTION DECLARATION#############################
 salutation
 #sleep 2
-progress_bar(0.01)
+progress_bar
 read -p "Please enter the path of your Git Master directory > " dir_path
 cd $dir_path
 echo -e "We are now at $(pwd)"
