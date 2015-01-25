@@ -117,6 +117,7 @@ function commit_msg {
      add_file
      commit_msg
      git push origin master
+     
  }
 
  function git_pull {
@@ -124,10 +125,12 @@ function commit_msg {
  }
 
 ################################FUNCTION DECLARATION#############################
+
+for (( i = 1; i < 50; ++i ))
+    do
 salutation
 author_info
 progress_bar_bottom
 ask_origin
 git_actions
-commit_msg
-
+done
