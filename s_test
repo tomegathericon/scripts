@@ -1,0 +1,11 @@
+echo -e "Please enter the file you want to push"  
+select FILENAME in * ALL ;
+do
+if [ $FILENAME == ALL ] ; then
+git add *
+break
+else
+git add $FILENAME
+break
+fi
+done

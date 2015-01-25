@@ -98,12 +98,14 @@ function add_file {
     echo -e "Please enter the file you want to push"  
     select FILENAME in * "ALL";
     do
-    if [$FILENAME == ALL ] ; then
+    if [ $FILENAME == ALL ] ; then
         git add *
+        break
         else
             git add $FILENAME
+            break
             fi
-          done
+    done
   }
 
 function commit_msg {
@@ -126,7 +128,6 @@ salutation
 author_info
 progress_bar_bottom
 ask_origin
-add_file
-exit
+git_actions
 commit_msg
 
