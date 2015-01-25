@@ -80,21 +80,30 @@ function ask_origin {
     done
 }
 
-function choice {
+function git_actions {
     echo -e "I am now at your Git Master DIrectory. How do you want me to assist you?"
     tput cud 1
-    echo -e "Currently I can perform the following two actions : "
+    echo -e "Currently I can perform the following actions : "
     tput cud 1
     echo -e "1) Push\n 2) Pull"
     read -p "Please choose : " choose
     case $choose in
+    1 ) git_push
+    ;;
+    2 ) git_pull
+    ;;
+    esac
    } 
 function add_file { 
     echo -e "Please enter the file you want to push"  
-    select FILENAME in *;
+    select FILENAME in * "ALL";
     do
-    git add $FILENAME
-    done
+    if [$FILENAME == ALL ] ; then
+        git add *
+        else
+            git add $FILENAME
+            fi
+          done
   }
 
 function commit_msg {
@@ -103,6 +112,8 @@ function commit_msg {
   }
 
  function git_push {
+     add_file
+     commit_msg
      git push origin master
  }
 
@@ -115,7 +126,7 @@ salutation
 author_info
 progress_bar_bottom
 ask_origin
-exit
 add_file
+exit
 commit_msg
 
