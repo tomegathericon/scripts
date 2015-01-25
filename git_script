@@ -6,6 +6,7 @@
 ##Soon to be added : Init & Diff
 
 ################################VARIABLE DECLARATION#############################
+a=1
 v1=$(date +%H)
 v2=$(locate .git | grep -w ".git" | xargs -n 1 dirname)
 height=$(tput lines)
@@ -13,7 +14,7 @@ width=$(tput cols)
 ################################VARIABLE DECLARATION#############################
 ################################FUNCTION DECLARATION#############################
 
-function author_info {
+function prologue {
     echo -e "
               Author = Tomegathericon
               Email-ID = kapoor.abhishek@outlook.com
@@ -81,7 +82,7 @@ function ask_origin {
 }
 
 function git_actions {
-    echo -e "I am now at your Git Master DIrectory. How do you want me to assist you?"
+    echo -e "I am now at your Git Master Directory. How do you want me to assist you?"
     tput cud 1
     echo -e "Currently I can perform the following actions : "
     tput cud 1
@@ -108,7 +109,8 @@ function add_file {
     done
   }
 
-function commit_msg {
+  
+ function commit_msg {
     read -p "Please enter your commit message > " msg
     git commit -m "$msg"
   }
@@ -124,13 +126,21 @@ function commit_msg {
      git pull origin master
  }
 
-################################FUNCTION DECLARATION#############################
+ function epilogue {
+     echo -e " By default I will run continuously 10 times, if you want me to exit please press CTRL-C"
+     sleep 10
+ }
 
-for (( i = 1; i < 50; ++i ))
-    do
+
+################################FUNCTION DECLARATION#############################
+until [ $a = 3 ] 
+do
 salutation
-author_info
+prologue
 progress_bar_bottom
 ask_origin
 git_actions
+epilogue
+a=$((a+1))
 done
+
