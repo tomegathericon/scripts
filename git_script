@@ -69,9 +69,10 @@ function ask_origin {
     progress_bar
     tput rev
     tput setaf 7 
+    tput cud 1
     echo -e "I have found these directories, please chose your Git Master Folder >"
     tput sgr0
-    tput cud 10
+    tput cud 5
     cd /
     select ao in $v2 ;
     do
@@ -117,13 +118,23 @@ function add_file {
   }
 
  function git_push {
+     tput clear
+     tput cud 1
+     echo -e "You Chose to Push your changes. I will now follow the necessary steps."
+     sleep 5
      add_file
      commit_msg
+     tput cud 1
+     echo -e "Now Pushing your changes"
+     sleep 3
      git push origin master
      
  }
 
  function git_pull {
+     tput clear
+     tput cud 1
+     echo -e "I am now pulling latest updates from your repository."
      git pull origin master
  }
 
