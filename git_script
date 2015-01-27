@@ -146,14 +146,8 @@ function add_file {
      tput cud 1
      echo -e " By default I will run continuously 10 times, if you want me to exit please press CTRL-C"
      tput cud 1
-<<<<<<< HEAD
-     sleep 10
      for ((j=10;j>0;--j)) do
      echo -n "$j"
-=======
-     for ((j=10;j>0;--j)) do;
-     echo -n "$j "
->>>>>>> e89e0cf85a53f01de4dfb54691e95a4d33b0b25e
      sleep 1
      done
  }
