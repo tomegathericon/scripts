@@ -142,9 +142,21 @@ function add_file {
      echo -e " By default I will run continuously 10 times, if you want me to exit please press CTRL-C"
      sleep 10
  }
+ 
+ function trap1 {
+     echo -e "Are you sure you want to exit?"
+     tput cud1
+     read -p "Please enter y or n > " t1
+     if [ $t1 == y ]; 
+     then
+     tput sgr0
+     exit
+     fi
+ }
 
 
 ################################FUNCTION DECLARATION#############################
+trap trap1 SIGINT
 until [ $a = 3 ] 
 do
 salutation
