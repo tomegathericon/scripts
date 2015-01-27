@@ -95,6 +95,9 @@ function git_actions {
     ;;
     2 ) git_pull
     ;;
+    
+    * )
+    a=2
     esac
    } 
 function add_file { 
