@@ -82,11 +82,12 @@ function ask_origin {
 }
 
 function git_actions {
+    tput clear
     echo -e "I am now at your Git Master Directory. How do you want me to assist you?"
     tput cud 1
     echo -e "Currently I can perform the following actions : "
     tput cud 1
-    echo -e "1) Push\n 2) Pull"
+    echo -e " 1) Push\n 2) Pull"
     read -p "Please choose : " choose
     case $choose in
     1 ) git_push
@@ -139,6 +140,7 @@ salutation
 prologue
 progress_bar_bottom
 ask_origin
+progress_bar_bottom
 git_actions
 epilogue
 a=$((a+1))
