@@ -97,6 +97,7 @@ function git_actions {
     ;;
     
     * )
+    echo -e "You entered $choose which is a wrong choice. I will now restart"
     a=2
     esac
    } 
@@ -142,8 +143,14 @@ function add_file {
  }
 
  function epilogue {
+     tput cud 1
      echo -e " By default I will run continuously 10 times, if you want me to exit please press CTRL-C"
+     tput cud 1
      sleep 10
+     for ((j=10;j>0;--j)) do;
+     echo -n "$j"
+     sleep 1
+     done
  }
  
  function trap1 {
@@ -160,7 +167,7 @@ function add_file {
 
 ################################FUNCTION DECLARATION#############################
 trap trap1 SIGINT
-until [ $a = 3 ] 
+until [ $a = 10 ] 
 do
 salutation
 prologue
