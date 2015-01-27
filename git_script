@@ -98,7 +98,7 @@ function git_actions {
     
     * )
     echo -e "You entered $choose which is a wrong choice. I will now restart"
-    a=2
+    a=$((a+1))
     esac
    } 
 function add_file { 

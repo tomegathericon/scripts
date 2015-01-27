@@ -1,0 +1,25 @@
+#!/bin/bash
+#author=tomegathericon
+#email-id=kapoor.abhishek@outlook.com
+#For Loop Tests
+
+a=0
+b=1
+c=1
+
+for ((i=0;i<10;i++));
+
+do
+
+
+    
+    
+    
+    
+    a=$((b+c))
+    echo -e "$a"
+    b=$c
+    c=$a
+
+
+done
