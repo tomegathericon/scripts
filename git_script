@@ -77,7 +77,7 @@ function ask_origin {
     select ao in $v2 ;
     do
     cd $ao
-    echo -e "We are now at $(pwd)"
+    echo -e "I am now at $(pwd)"
     break
     done
 }
@@ -153,8 +153,9 @@ function add_file {
  }
  
  function trap1 {
+     tput cud 1
      echo -e "Are you sure you want to exit?"
-     tput cud1
+     tput cud 1
      read -p "Please enter y or n > " t1
      if [ $t1 == y ]; 
      then
