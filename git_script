@@ -119,7 +119,7 @@ function add_file {
 
  function git_push {
      tput clear
-     tput cud 1
+     tput cud 2
      echo -e "You Chose to Push your changes. I will now follow the necessary steps."
      sleep 5
      add_file
