@@ -4,22 +4,16 @@
 #For Loop Tests
 
 a=0
-b=1
+b=0
 c=1
 
 for ((i=0;i<10;i++));
 
-do
-
-
-    
-    
-    
-    
-    a=$((b+c))
+do  
+    b=$((a+c))
     echo -e "$a"
-    b=$c
-    c=$a
+    a=$c
+    c=$b
 
 
 done
