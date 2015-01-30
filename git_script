@@ -70,7 +70,7 @@ function ask_origin {
     tput rev
     tput setaf 7 
     tput cud 1
-    echo -e "I have found these directories, please chose your Git Master Folder >"
+    echo -e "\nI have found these directories, please chose your Git Master Folder >"
     tput sgr0
     tput cud 5
     cd /
@@ -154,7 +154,7 @@ function add_file {
  
  function trap1 {
      tput cud 1
-     echo -e "Are you sure you want to exit?"
+     echo -e "\nAre you sure you want to exit?"
      tput cud 1
      read -p "Please enter y or n > " t1
      if [ $t1 == y ]; 
