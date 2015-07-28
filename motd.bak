@@ -61,7 +61,7 @@ $salutation
 		DISK SMART STATUS           $(sudo smartctl -a /dev/sda1 | grep Errors)
      *********************************************************************************************
 	
-    " > $motd 
+    " > $motd
 	
 
 ###############WEATHER SCRIPT#############

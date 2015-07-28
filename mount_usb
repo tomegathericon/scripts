@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 #Author=tomegathericon
 #Email=kapoor.abhishek@outlook.com
 #Description- Script to mount USB devices according to certain conditions
+
+
+udevil mount /dev/sdc1

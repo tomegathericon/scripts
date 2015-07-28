@@ -19,7 +19,7 @@ function interrupt_msg {
 
 if [ -z $CE ]; then
 
-#trap interrupt_msg SIGINT    
+trap interrupt_msg SIGINT    
 echo -e "Please Chose From The Following Options To Start The Desired Services"
 
 echo -e " 1)Web Server\n 2)NFS Server\n 3)Samba\n 4)Webmin\n 5)FTP Server\n 6)MySQL Server\n 7)Mail Server\n 8)Print Server\n 9)VNC Server\n 10)VNC Web\n 11)All Of The Above"
