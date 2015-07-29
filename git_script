@@ -160,7 +160,14 @@ function add_file {
      if [ $t1 == y ]; 
      then
      tput sgr0
+     tput cud 1
+     echo -e "Thank You For Using This Script"
+     tput sgr0
      exit
+     else
+     tput cud 1    
+     echo -e "Smart Choice"
+     tput sgr0
      fi
  }
 
