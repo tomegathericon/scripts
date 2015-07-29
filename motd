@@ -43,8 +43,8 @@ $(linux_logo)
 
 $salutation
 
-    **************************************************************************************************
-    	USER 	                    $lu                                                              
+       ******************************************************************************************
+    	        USER 	                    $lu                                                              
 		SERVER	                    $Hostname                                                        
 		PROCESSOR                   $PType                                                           
 		LAST LOGIN IP	            $(last -w | grep $lu | awk NR==2 | awk '{print $3}')             
@@ -59,7 +59,7 @@ $salutation
 		SYSTEM TEMPERATURE          $(acpi -t | awk '{print $4, $5, $6}')                             
 		UPDATES AVAILABLE           $(pacman -Qu | wc -l)                                            
 		DISK SMART STATUS           $(sudo smartctl -a /dev/sda1 | grep Errors)                      
-    **************************************************************************************************
+       *********************************************************************************************
 	
     " > $motd 
 	
