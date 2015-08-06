@@ -44,7 +44,7 @@ $(linux_logo)
 $salutation
 
        ******************************************************************************************
-    	        USER 	                    $lu                                                              
+        USER 	                    $lu                                                              
 		SERVER	                    $Hostname                                                        
 		PROCESSOR                   $PType                                                           
 		LAST LOGIN IP	            $(last -w | grep $lu | awk NR==2 | awk '{print $3}')             
