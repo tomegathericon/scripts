@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Script To Start List Of Services  
+#Script To Start A List Of Services  
 #To Be Run Manually
 
 CE=$(printenv | grep screen)
@@ -61,6 +61,7 @@ case $start in
 10 ) vnc_web_launch --vnc kapoorabhishek.asia:5901    
     ;;
 11) sudo systemctl start httpd &
+    sudo systemctl start rpcbind &
     sudo systemctl start nfs-server  &
     sudo systemctl start smbd &
     sudo systemctl start nmbd &
@@ -70,8 +71,7 @@ case $start in
     sudo systemctl start postfix &
     sudo systemctl start mysqld
     sudo cupsd
-    vncserver -alwaysshared :1
-    vnc_web_launch --vnc kapoorabhishek.asia:5901
+    mediatomb -p 7777 -d
      ;;
 
 * ) echo -e " You entered $start which is not in the above options. 
