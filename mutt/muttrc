@@ -1,0 +1,8 @@
+macro index <a> '<change-folder>imap://instances.cf<enter>'
+macro index <b> '<change-folder>imaps://imap.gmail.com<enter>'
+folder-hook 'instances.cf' 'source ~/.mutt/AWS'
+folder-hook 'imap.gmail.com' 'source ~/.mutt/Work'
+source ~/.mutt/AWS
+
+
+

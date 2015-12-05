@@ -1,0 +1,14 @@
+# Configure imap username and password 
+ set imap_user="kapoor.abhishek@instances.cf"
+ set imap_pass="pass123#$"
+#
+# # Configure Default Folder and where to put Sent Mail 
+ set folder="imap://instances.cf/"
+ set spoolfile=$folder
+ set record="=Sent"
+#
+# # Configure SMTP Settings 
+ set smtp_url = "smtp://$imap_user:$imap_pass@instances.cf:25/"
+ set realname="Abhishek Kapoor"
+ set from="kapoor.abhishek@instances.cf"
+ set use_from = yes
