@@ -1,8 +1,21 @@
 #A simple program.
 
-a = input(' Enter the first fucking number ')
+#!/usr/bin/env python
 
-b = input(' Enter the net fucking number ')
+#a = input(' Enter the first fucking number ')
+
+#b = input(' Enter the net fucking number ')
 
 
-print(int(a)+int(b))
+#print(int(a)+int(b))
+
+a = 'A'
+b = 'B'
+
+print a,b
+
+c = int(raw_input('First Number '))
+d = int(raw_input('Second Number '))
+e = c+d
+
+print e
