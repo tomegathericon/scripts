@@ -8,7 +8,7 @@
 
 
 #print(int(a)+int(b))
-
+import sys
 a = 'A'
 b = 'B'
 
@@ -19,3 +19,4 @@ d = int(raw_input('Second Number '))
 e = c+d
 
 print e
+print sys.argv[1]
