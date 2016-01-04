@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "$@: Done" | mailx kapoor.abhishek@outlook.com
