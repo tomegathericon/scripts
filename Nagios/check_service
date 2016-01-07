@@ -1,0 +1,13 @@
+#!/bin/bash
+
+a=$(ps -aux | grep nfs | wc -l)
+
+if [ $a > 1 ]; then
+
+exit 0
+
+else
+
+exit 2
+ 
+fi
