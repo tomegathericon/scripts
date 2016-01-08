@@ -1,12 +1,17 @@
 #!/bin/bash
 
-a=$(ps -aux | grep nfs | wc -l)
+arg=$1
+a=$(ps -aux | grep $arg | wc -l)
 
-if [ $a > 1 ]; then
+if [ $a -gt 3 ]; then
+
+echo "Everything is Normal"
 
 exit 0
 
-else
+elif [ $a == 3 ]; then
+
+echo "The $arg service has failed"
 
 exit 2
  
