@@ -5,13 +5,13 @@ a=$(ps -aux | grep $arg | wc -l)
 
 if [ $a -gt 3 ]; then
 
-echo "Everything is Normal"
+echo "The $arg service is running"
 
 exit 0
 
 elif [ $a == 3 ]; then
 
-echo "The $arg service has failed"
+echo "The $arg service is not runnig"
 
 exit 2
  
