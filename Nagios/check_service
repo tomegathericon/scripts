@@ -1,0 +1,18 @@
+#!/bin/bash
+
+arg=$1
+a=$(ps -aux | grep $arg | wc -l)
+
+if [ $a -gt 3 ]; then
+
+echo "Everything is Normal"
+
+exit 0
+
+elif [ $a == 3 ]; then
+
+echo "The $arg service has failed"
+
+exit 2
+ 
+fi
