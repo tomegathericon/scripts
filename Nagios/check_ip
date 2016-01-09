@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Script to Check Public IP with exit codes pertinent to Nagios
+
+echo -e "The current Public IP is $(wget -qO- http://ipecho.net/plain)"
+exit 0
