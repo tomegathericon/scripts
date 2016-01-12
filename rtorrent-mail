@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "$@: Done" | mutt kapoor.abhishek@outlook.com
+echo "$@: Done" | mutt -s "Torrent Has Downloaded" kapoor.abhishek@outlook.com
