@@ -3,9 +3,13 @@
 PIP=$(cat /etc/motd | grep "PUBLIC IP" | awk '{print $3}')
 CIP=$(wget -qO- http://ipecho.net/plain)
 
-if [ $PIP -ne $CIP ]; then
+if [ "$PIP" == "$CIP" ]; then
+
+exit
+
+else
    
-echo "The Dynamic IP has changed to $CIP" | mail -s "IP Change" tomegathericon
+echo "The Dynamic IP has changed to $CIP" | mutt -s "IP Change" kapoor.abhishek@outlook.com
 
 fi
 
