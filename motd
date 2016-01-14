@@ -36,6 +36,7 @@ salutation="You Should Be Sleeping $( last -w | awk NR==2 | awk '{print $1}' | s
 fi
 
 
+	
 ##### BODY #####
 
 echo -e "
@@ -49,7 +50,7 @@ $salutation
 		PROCESSOR                   $PType                                                           
 		LAST LOGIN IP	            $(last -w | grep $lu | awk NR==2 | awk '{print $3}')             
 		CURRENT LOGIN IP            $(last -w | grep $lu | awk NR==1 | awk '{print $3}')              
-		SYSTEM IP                   $(printenv | grep  -i ssh_connection | awk '{print $3}')                                                        
+		SYSTEM IP                   $(printenv | grep -i ssh_connection | awk '{print $3}')                                                        
 		PUBLIC IP                   $(wget -qO- http://ipecho.net/plain)                             
 		SYSTEM UPTIME               $(uptime | awk '{print $3,$4,$5}'|  sed s/,//g) Hours            
 		CURRENT TIME                $(date)                                                          
@@ -61,7 +62,7 @@ $salutation
        ********************************************************************************************
 	
     " > $motd 
-	
+
 
 ###############WEATHER SCRIPT#############
 
