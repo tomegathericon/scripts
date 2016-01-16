@@ -7,7 +7,7 @@ if [ $a == 1 ]; then
 
 echo  " 
 
-nameserver 8.8.8.8 " > $b
+nameserver 52.76.168.105 " > $b
 
 else
 
