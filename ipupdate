@@ -1,0 +1,14 @@
+#!/bin/bash
+
+a=$(wget -qO- http://ipecho.net/plain)
+b=$(host tomegathericon.webhop.me | awk '{print $4}')
+
+if [ "$a" == "$b" ]; then
+
+exit
+
+else
+
+$(links -dump http://[tomegathericon]:[pass123#$]@freedns.afraid.org/nic/update?hostname=centpad.instances.cf&myip=$b >> /tmp/freedns_@_instances_cf.log 2>&1 &) 
+
+fi
