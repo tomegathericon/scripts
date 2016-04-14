@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Update Notification
+
+sudo pacman -Syy &> /dev/null
+
+a=$(sudo pacman -Qu | wc -l)
+
+if a==0; then
+
+exit 
+
+else
+
+xmessage "Tomegathericon's Arch requires an update. Currently there are $a updates available"
+
+fi
